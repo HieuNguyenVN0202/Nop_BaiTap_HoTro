@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+</head>
+<body>
+<p>Welcome to Calculate Page</p>
+<form th:action="@{/home/calculator}">
+    <input type="number" name="number2" placeholder="Number2.....">
+    <br>
+    <input type="number" name="number1" placeholder="Number1.....">
+    <br>
+    <button type="submit">Calculate</button>
+</form>
+</body>
+</html>
