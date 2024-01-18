@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>List Products</h1>
+<button>
+    <a href="@{/product/add-product}">Create</a>
+</button>
+<table border="1px solid black">
+    <tr>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td>Action</td>
+    </tr>
+
+    <tr th:each="product, state : ${listProducts}">
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.description}"></td>
+        <td th:text="${product.price}"></td>
+        <td>
+            <button>edit</button>
+            <button>delete</button>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>
